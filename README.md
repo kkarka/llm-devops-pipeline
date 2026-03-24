@@ -3,6 +3,10 @@
 ## 🚀 Overview
 This project demonstrates an end-to-end deployment of a Large Language Model using FastAPI, Docker, and Kubernetes.
 
+## Architecture
+
+Client → FastAPI → LLM (GPT-2) → Response
+
 ## Features (Phase 1)
 - FastAPI-based LLM inference API
 - GPT-2 model integration using HuggingFace Transformers
@@ -29,3 +33,18 @@ POST /generate
   "prompt": "DevOps is"
 }
 ```
+
+
+## Challenges Faced
+
+- CUDA compatibility issue with PyTorch
+- Resolved by using CPU-based deployment
+- Ensured portability for Docker & Kubernetes
+
+
+## Future Enhancements
+
+- Dockerization
+- Kubernetes deployment
+- CI/CD pipeline (Jenkins)
+- Monitoring (Prometheus + Grafana)
